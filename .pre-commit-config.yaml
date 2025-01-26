@@ -4,16 +4,23 @@ repos:
   rev: v0.9.3
   hooks:
     # Run the linter.
-    - id: ruff
-      args: [ --fix ]
+  - id: ruff
+    args: [--fix]
     # Run the formatter.
-    - id: ruff-format
+  - id: ruff-format
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0  # Use the ref you want to point at
-    hooks:
-    - id: check-yaml
-    - id: check-json
-    - id: check-toml
-    - id: end-of-file-fixer
-    - id: trailing-whitespace
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0  # Use the ref you want to point at
+  hooks:
+  - id: pretty-format-json
+    args: [--autofix]
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.14.0
+  hooks:
+  - id: pretty-format-yaml
+    args: [--autofix, --indent, '2']
+  - id: pretty-format-toml
+    args: [--autofix]
