@@ -4,7 +4,7 @@ module.exports = {
   types: [
 		{
 			value: '🧪 experiment',
-			name: '🧪 experiment: 実験を回すタイミング',
+			name: '🧪 experiment: 実験',
 			title: 'Experiments',
 		},
     {
@@ -29,7 +29,7 @@ module.exports = {
 		},
     {
       value: "🎨 style",
-      name: "🎨 style:    フォーマットの変更（コードの動作に影響しないスペース、フォーマット、セミコロンなどの変更）",
+      name: "🎨 style:    フォーマットの変更",
       title: "Styles",
     },
     {
@@ -43,10 +43,13 @@ module.exports = {
       title: "WIPs",
     },
   ],
-
+	scope: [
+		{ name: 'project' },
+	],
   messages: {
     type: "コミットタイプを選択:\n",
     subject: "変更内容の要約:\n",
     confirmCommit: "この内容でコミットしてよろしいですか?",
   },
+	skipQuestions: ['scope', 'customScope', 'body', 'breaking', 'footer'],
 };
