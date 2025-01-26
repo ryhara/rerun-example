@@ -9,6 +9,11 @@ repos:
     # Run the formatter.
   - id: ruff-format
 
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.14.1
+  hooks:
+  - id: mypy
+
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v5.0.0  # Use the ref you want to point at
   hooks:

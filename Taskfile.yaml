@@ -14,5 +14,6 @@ tasks:
     - npm run prepare
   commit:
     desc: commit
+    aliases: [c]
     cmds:
     - npm run commit
