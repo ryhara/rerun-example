@@ -4,14 +4,17 @@
       "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": "./.cz_config.js"
+      "config": "./.cz-config.js"
     }
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
     "commitizen": "^4.3.1",
+    "commitlint-config-gitmoji": "^2.3.1",
     "cz-customizable": "^7.4.0"
   },
   "scripts": {
-    "commit": "pre-commit run && npx cz"
+    "commit": "pre-commit run && npx cz",
+    "prepare": "bash -c \"cp ./.git_hooks/commit-msg ./.git/hooks/\""
   }
 }
