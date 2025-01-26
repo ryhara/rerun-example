@@ -15,6 +15,6 @@
   },
   "scripts": {
     "commit": "pre-commit run && npx cz",
-    "prepare": "bash -c \"cp ./.git_hooks/commit-msg ./.git/hooks/\""
+    "prepare": "bash -c \"cp ./.git_hooks/commit-msg ./.git/hooks/ && chmod +x ./.git/hooks/commit-msg\""
   }
 }
