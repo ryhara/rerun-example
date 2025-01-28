@@ -1,0 +1,37 @@
+name: Ruff Linter
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+    paths:
+    - src/**
+    - .github/workflows/ruff.yaml
+  pull_request:
+    paths:
+    - src/**
+    - .github/workflows/ruff.yaml
+
+jobs:
+  lint:
+    name: Run Ruff Linter
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: ruff check
+      uses: astral-sh/ruff-action@v3
+      with:
+        version-file: pyproject.toml
+        args: check
+        src: src
+
+    - name: ruff format
+      uses: astral-sh/ruff-action@v3
+      with:
+        version-file: pyproject.toml
+        args: format --check
+        src: src
