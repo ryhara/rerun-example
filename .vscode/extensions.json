@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "charliermarsh.ruff",
+    "streetsidesoftware.code-spell-checker",
+    "oderwat.indent-rainbow",
+    "Gruntfuggly.todo-tree",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "MS-CEINTL.vscode-language-pack-ja",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "ms-azuretools.vscode-docker"
+  ]
+}

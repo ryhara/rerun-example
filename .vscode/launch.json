@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "name": "Python Debugger: current file",
+      "program": "${file}",
+      "python": ".venv/bin/python",
+      "request": "launch",
+      "type": "debugpy"
+    }
+  ],
+  "version": "0.2.0"
+}
