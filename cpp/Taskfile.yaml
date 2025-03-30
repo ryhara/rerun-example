@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  default:
+    desc: list all tasks
+    cmds:
+    - task --list --sort none
+  build:
+    desc: cpp build
+    aliases: [b]
+    cmds:
+    - cmake -B build
+    - cmake --build build -j
+  run:
+    cmds:
+    - ./build/example_minimal
