@@ -6,11 +6,11 @@ on:
     branches:
     - main
     paths:
-    - src/**
+    - python/src/**
     - .github/workflows/ruff.yaml
   pull_request:
     paths:
-    - src/**
+    - python/src/**
     - .github/workflows/ruff.yaml
 
 jobs:
@@ -27,11 +27,11 @@ jobs:
       with:
         version-file: pyproject.toml
         args: check
-        src: src
+        src: python/src
 
     - name: ruff format
       uses: astral-sh/ruff-action@v3
       with:
         version-file: pyproject.toml
         args: format --check
-        src: src
+        src: python/src
