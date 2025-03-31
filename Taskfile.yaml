@@ -17,3 +17,9 @@ tasks:
     aliases: [c]
     cmds:
     - npm run commit
+
+  ruff:
+    desc: run ruff linter
+    cmds:
+    - uv run ruff check python/src
+    - uv run ruff format python/src
